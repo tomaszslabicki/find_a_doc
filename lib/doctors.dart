@@ -73,9 +73,9 @@ Widget _buildListItem(BuildContext context, DocumentSnapshot data) {
         elevation: 50.0,
         color: Colors.teal[300],
         child: ListTile(
-          title: Text(record.prenom + ' ' + record.nom, style: TextStyle(color: Colors.white)),
-          trailing: Text('Doctor', style: TextStyle(color: Colors.white)),
-          onTap: () => _goToRdv([record.id.toString(), record.prenom, record.nom]),
+          title: Text(record.prenom + ' ' + record.nom.toUpperCase(), style: TextStyle(color: Colors.white)),
+          trailing: Icon(Icons.person, color: Colors.white),
+          onTap: () => _goToRdv([record.id, record.prenom, record.nom]),
         ),
       ),
     ),

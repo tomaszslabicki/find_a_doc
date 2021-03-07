@@ -1,6 +1,9 @@
-import 'package:firebase_core/firebase_core.dart';
-import 'package:cloud_firestore/cloud_firestore.dart';
 import 'package:flutter/material.dart';
+
+// Firebase import
+import 'package:firebase_core/firebase_core.dart';
+
+// Project files import
 import 'package:find_a_doc/doctors.dart';
 
 
@@ -47,17 +50,25 @@ class _MyHomePageState extends State<MyHomePage> {
       appBar: AppBar(
         title: Text(widget.title),
       ),
-      body: Center(
-        child: RaisedButton(
-          onPressed: () => _doctorChoice(),
-          elevation: 20.0,
-          color: Colors.teal,
-          textColor: Colors.green,
-          child: Text(
-            'Tous les RDV en 1 seul clic !',
-            style: TextStyle(
-              color: Colors.white,
-              fontSize: 25.0
+      body: Container(
+        decoration: BoxDecoration(
+          image: DecorationImage(
+            image: AssetImage("images/homePage.jpg"),
+            fit: BoxFit.cover
+          )
+        ),
+        child: Center(
+          child: RaisedButton(
+            onPressed: () => _doctorChoice(),
+            elevation: 20.0,
+            color: Colors.teal,
+            textColor: Colors.green,
+            child: Text(
+              'Tous les RDV en 1 seul clic !',
+              style: TextStyle(
+                color: Colors.white,
+                fontSize: 25.0
+              ),
             ),
           ),
         ),
